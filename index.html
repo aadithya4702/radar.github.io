@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon"
+    href="https://th.bing.com/th/id/OIP.l9vhwVdDGGT4bKxaWVajGgHaHa?w=180&h=194&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+    type="image/x-icon" />
+  <title>Radar</title>
+  <script src="/app-ob.js"></script>
+</head>
+
+<body>
+  <div class="logo">
+    <div class="l">
+      <h1><i class="fas fa-wind"></i></h1>
+      <h3>Radar</h3>
+    </div>
+    <div class="search">
+      <input type="search" name="" id="input" autocomplete="on" onsearch="searchByCity()" />
+      <button onclick="searchByCity()"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <center>
+        <div class="weather">
+          <img src="/image/cloudy-day.png" alt="" id="img" />
+          <h2 id="temperature">9&deg;C</h2>
+        </div>
+        <h4 id="clouds">Sunny</h4>
+        <div class="city">
+          <h2 id="cit">Location</h2>
+        </div>
+        <div class="td">
+          <h3 id="time"></h3>
+          <h3 style="text-align: center">|</h3>
+          <h3 id="day"></h3>
+        </div>
+      </center>
+    </div>
+    <div class="box2">
+      <h2 class="cast-header">Upcoming forecast</h2>
+      <div class="temp">
+        <div class="next">
+          <div>
+            <p class="time">8:30 PM</p>
+            <h3>29 °C / 29 °C</h3>
+          </div>
+          <p class="desc">Light Rain</p>
+        </div>
+
+        <div class="next">
+          <div>
+            <p class="time">8:30 PM</p>
+            <h3>29 °C / 29 °C</h3>
+          </div>
+          <p class="desc">Light Rain</p>
+        </div>
+
+        <div class="next">
+          <div>
+            <p class="time">8:30 PM</p>
+            <h3>29 °C / 29 °C</h3>
+          </div>
+          <p class="desc">Light Rain</p>
+        </div>
+
+        <div class="next">
+          <div>
+            <p class="time">8:30 PM</p>
+            <h3>29 °C / 29 °C</h3>
+          </div>
+          <p class="desc">Light Rain</p>
+        </div>
+
+        <div class="next">
+          <div>
+            <p class="time">8:30 PM</p>
+            <h3>29 °C / 29 °C</h3>
+          </div>
+          <p class="desc">Light Rain</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box3">
+    <div class="t">
+      <h3>Parameters</h3>
+    </div>
+    <div class="contents">
+      <div class="cont">
+        <h4>
+          <img src="/image/sunrise.png" alt="" />
+        </h4>
+        <h5>Sunrise</h5>
+        <p id="sr">description</p>
+      </div>
+      <div class="cont">
+        <h4><img src="/image/sunset.png" alt="" /></h4>
+        <h5>Sunset</h5>
+        <p id="ss">description</p>
+      </div>
+      <div class="cont">
+        <h4><img src="/image/wind.png" alt="" /></h4>
+        <h5>Wind Speed </h5>
+        <p id="wi">description</p>
+      </div>
+      <div class="cont">
+        <h4><img src="/image/humidity.png" alt="" /></h4>
+        <h5>Humidity</h5>
+        <p id="hu">description</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- script  -->
+  <script>
+    var el = document.getElementById("time");
+    setInterval(function () {
+      var currentTime = new Date(),
+        hours = currentTime.getHours(),
+        minutes = currentTime.getMinutes(),
+        ampm = hours > 11 ? "PM" : "AM";
+
+      if (hours < 10) {
+        hours = "0" + hours;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+      el.innerHTML = hours + ":" + minutes + " " + ampm;
+    }, 1000);
+
+    // day
+    var myDate = new Date();
+    var myDay = myDate.getDay();
+
+    // Array of days.
+    var weekday = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    document.getElementById("day").innerHTML = weekday[myDay];
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&family=Roboto+Mono&family=Sono&display=swap");
+
+/* font-family: 'Pacifico', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Sono', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  background-image: linear-gradient(
+    30deg,
+    rgb(26, 59, 224),
+    rgba(225, 12, 12, 0.897)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  letter-spacing: 1px;
+  width: 250px;
+  height: 30px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+}
+.logo {
+  display: flex;
+  width: 100%;
+  height: 80px;
+
+  align-items: center;
+
+  padding: 20px;
+  justify-content: space-between;
+}
+.logo .l {
+  display: flex;
+  gap: 20px;
+  font-size: 30px;
+
+  font-family: "Sono", cursive;
+}
+.logo .l h1 {
+  font-size: 30px;
+  padding: 5px;
+  background: rgba(75, 56, 56, 0.16);
+  border-radius: 50%;
+  color: burlywood;
+}
+.logo .l h3 {
+  color: whitesmoke;
+}
+.logo .search {
+  background: rgba(143, 140, 140, 0.84);
+  margin-right: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.2px);
+  -webkit-backdrop-filter: blur(1.2px);
+  border: 1px solid rgba(75, 56, 56, 0.3);
+  caret-color: bisque;
+  padding: 8px;
+  border-radius: 20px;
+  
+}
+.logo .search i {
+  border-left: 2px solid black;
+  padding: 5px;
+}
+.container {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.container .box {
+  width: fit-content;
+  height: fit-content;
+  padding: 30px;
+  background: rgba(132, 106, 106, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(132, 106, 106, 1);
+}
+.container .box .weather {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+}
+.container .box .weather img {
+  height: 150px;
+  width: 150px;
+}
+.container .box .weather h2 {
+  display: flex;
+  margin-left: 30px;
+  opacity: 1;
+  font-size: 80px;
+  color: gainsboro;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+}
+.container .box .city {
+  display: flex;
+  justify-content: space-around;
+  letter-spacing: 2px;
+  color: white;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+}
+
+.container .box .city h2 {
+  display: flex;
+  line-break: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 10px;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.container .box h4 {
+  font-size: 18px;
+
+  color: goldenrod;
+  font-family: "Sono", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.container .box .td {
+  display: flex;
+  justify-content: space-around;
+}
+.container .box h3 {
+  font-size: 30px;
+  color: wheat;
+  font-family: "Roboto Mono", monospace;
+  width: fit-content;
+  padding: 10px;
+}
+.container .box #day {
+  font-size: 30px;
+  font-family: "Roboto Mono", monospace;
+  color: wheat;
+  padding: 10px;
+}
+.container .box2 {
+  width: 400px;
+  height: fit-content;
+  padding: 20px;
+  background: rgba(132, 106, 106, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(132, 106, 106, 1);
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+.container .box2 h2 {
+  width: fit-content;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: "Roboto Mono", monospace;
+  color: wheat;
+  background-color: teal;
+  border-radius: 20px;
+  padding: 10px;
+}
+.container .box2 .next {
+  padding: 5px;
+  margin: 2px;
+}
+.container .box2 .next .time {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  color: aliceblue;
+  letter-spacing: 1px;
+}
+.container .box2 .next h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: greenyellow;
+  letter-spacing: 1px;
+  position: absolute;
+}
+.container .box2 .next .desc {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: gold;
+  letter-spacing: 1px;
+  align-items: center;
+}
+
+.box3 {
+  margin: 20px;
+
+  height: fit-content;
+  padding: 15px;
+  background: rgba(132, 106, 106, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(132, 106, 106, 1);
+}
+.box3 .t {
+  width: fit-content;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: "Roboto Mono", monospace;
+  color: wheat;
+  background-color: teal;
+  border-radius: 20px;
+  padding: 10px;
+}
+.box3 .contents {
+  display: flex;
+  justify-content: space-evenly;
+}
+.box3 .contents .cont {
+  padding: 5px;
+}
+.box3 .contents .cont img {
+  height: 50px;
+  width: 50px;
+}
+.box3 .contents .cont h5 {
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: whitesmoke;
+  letter-spacing: 1px;
+}
+.box3 .contents .cont p {
+  width: 100px;
+  height: auto;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: gold;
+  letter-spacing: 1px;
+
+  word-wrap: break-word;
+}
+
+/* bg color */
+
+.bg-thunder {
+  background: rgb(34, 36, 34);
+  background: linear-gradient(
+    90deg,
+    rgba(34, 36, 34, 1) 35%,
+    rgba(8, 38, 150, 1) 100%
+  );
+}
+
+.bg-snow {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.bg-atmos {
+  background: rgb(14, 222, 244);
+  background: linear-gradient(
+    90deg,
+    rgba(14, 222, 244, 1) 35%,
+    rgba(8, 38, 150, 1) 100%
+  );
+}
+
+.bg-clrd {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.bg-clrn {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.bg-norm {
+  background-image: linear-gradient(
+    30deg,
+    rgb(26, 59, 224),
+    rgba(225, 12, 12, 0.897)
+  );
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
+  }
+
+  .container .box {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .box2 {
+    max-width: 100%;
+  }
+
+  .box3 {
+    max-width: 100%;
+  }
+  .box3 .contents {
+    flex-direction: column;
+  }
+  .container .box .weather h2 {
+    /* Adjusted font size for smaller screens */
+    font-size: 30px;
+  }
+
+  .container .box h4 {
+    /* Adjusted font size for smaller screens */
+    font-size: 16px;
+  }
+
+  .container .box h3 {
+    /* Adjusted font size for smaller screens */
+    font-size: 24px;
+  }
+
+  .container .box #day {
+    /* Adjusted font size for smaller screens */
+    font-size: 24px;
+  }
+
+  .container .box2 h2 {
+    /* Adjusted font size for smaller screens */
+    font-size: 16px;
+  }
+
+  .container .box2 .next .time {
+    /* Adjusted font size for smaller screens */
+    font-size: 18px;
+  }
+
+  .container .box2 .next h3 {
+    /* Adjusted font size for smaller screens */
+    font-size: 10px;
+  }
+
+  .box3 .t {
+    /* Adjusted font size for smaller screens */
+    font-size: 16px;
+  }
+
+  .box3 .contents .cont h5 {
+    /* Adjusted font size for smaller screens */
+    font-size: 12px;
+  }
+
+  .box3 .contents .cont p {
+    /* Adjusted font size for smaller screens */
+    font-size: 12px;
+  }
+    .logo {
+    flex-direction: column; /* Stack logo and search elements vertically */
+    align-items: center;
+  }
+
+  .logo .search {
+    margin-top: 20px;
+    display: flex; /* Adjust the margin for better spacing */
+  }
+}
